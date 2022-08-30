@@ -104,7 +104,7 @@ h1 {
   font-size: 3rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 20px;
 }
 h3 {
   font-size: 1.25rem;
@@ -173,6 +173,15 @@ p {
 /* section */
 .section {
   padding-bottom: 5rem;
+  padding-top: 30px;
+}
+.mark {
+  width: 78px;
+  /* color: red; */
+  display: block;
+  height: 2px;
+  background: #ff2f10;
+  margin: 0 auto;
 }
 
 .section-center {
@@ -194,7 +203,9 @@ main {
 /* // scroll */
 
 #home {
-  background: linear-gradient(rgb(5 53 58 / 88%), hsl(174deg 85% 14% / 55%)),
+  /*background: linear-gradient(rgb(5 53 58 / 88%), hsl(174deg 85% 14% / 55%)),
+    url(./img/5edited.jpg) bottom/cover no-repeat;*/
+  background: linear-gradient(rgb(33 19 0 / 100%), hsl(0deg 0% 0% / 62%)),
     url(./img/5edited.jpg) bottom/cover no-repeat;
   min-height: 100vh;
 }
@@ -328,14 +339,15 @@ button.nav-toggle:hover {
 }
 
 .section h2 span {
-  color: #3d6fa0;
+  color: #6c3508;
 }
 
 .footer {
-  background: #13233c;
+  background: #181511;
   text-align: center;
-  position: relative;
-  display: grid;
+  /* position: relative; */
+  /* display: grid; */
+  overflow: hidden;
 }
 
 .footer p {
@@ -357,7 +369,7 @@ p.ihbadhon {
   bottom: 3rem;
   right: 3rem;
   font-size: 24px;
-  background: #004299;
+  background: #6c3508;
   width: 2rem;
   height: 2rem;
   text-align: center;
@@ -403,6 +415,18 @@ img.tour-img {
 }
 
 /*  About Section */
+.bio {
+  padding-top: 25px;
+}
+.backgroundbio {
+  background: #ebeff1;
+}
+.bioinfo {
+  display: flex;
+  justify-content: space-between;
+  width: 395px;
+  border-bottom: 1px solid #c8d4da;
+}
 
 h2.title {
   text-align: left;
@@ -411,20 +435,31 @@ h2.title {
   padding-bottom: 8px;
 }
 
-.edu_bio {
+.college {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 395px;
+  margin-bottom: 11px;
+}
+
+.university {
+  display: flex;
+  justify-content: space-between;
+  width: 395px;
 }
 
 .education {
   margin-bottom: 35px;
 }
+span.department {
+  text-align: left;
+  float: left;
+}
 
 .birth {
   display: flex;
   justify-content: space-between;
-  width: 450px;
+  width: 395px;
   background: #ebeff1;
   border-bottom: 1px solid #c8d4da;
   border-top: 1px solid #c8d4da;
@@ -433,14 +468,14 @@ h2.title {
 .nickname {
   display: flex;
   justify-content: space-between;
-  width: 450px;
+  width: 395px;
   border-bottom: 1px solid #c8d4da;
 }
 
 .birth_place {
   display: flex;
   justify-content: space-between;
-  width: 450px;
+  width: 395px;
   background: #ebeff1;
   border-bottom: 1px solid #c8d4da;
 }
@@ -448,14 +483,14 @@ h2.title {
 .gender {
   display: flex;
   justify-content: space-between;
-  width: 450px;
+  width: 395px;
   border-bottom: 1px solid #c8d4da;
 }
 
 .height {
   display: flex;
   justify-content: space-between;
-  width: 450px;
+  width: 395px;
   background: #ebeff1;
   border-bottom: 1px solid #c8d4da;
 }
@@ -463,12 +498,12 @@ h2.title {
 .spouse {
   display: flex;
   justify-content: space-between;
-  width: 450px;
+  width: 395px;
   /* font-size: 19px; */
   /* border-bottom: 1px solid #c8d4da; */
 }
 .left {
-  width: 420px;
+  width: 230px;
   float: left;
   text-align: left;
   font-size: 15px;
@@ -481,12 +516,193 @@ h2.title {
   width: 180px;
   line-height: 41px;
 }
+.line_height {
+  line-height: 25px;
+}
+
+/* contact section*/
+section#subscribe {
+  position: relative;
+  margin-bottom: -159px;
+}
+
+.subBoxsingle {
+  /* float: left; */
+  width: 330px;
+  margin-left: 41px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.subBoxsingle h2 {
+  letter-spacing: -1px;
+  padding-bottom: 1px;
+  color: #9f9fab;
+  font-size: 25px;
+}
+
+.inputboxes input:first-child {
+  border-radius: 50px;
+  padding: 7px 10px;
+  /* border: 1px solid #ff5200; */
+  letter-spacing: 1px;
+  border: 0;
+  outline: none;
+  background: #d1d1d7;
+}
+
+.inputboxes {
+  overflow: hidden; /* border-radius: 73px; */
+}
+
+.inputboxes input:last-child {
+  padding: 7px 10px;
+  border-radius: 50px;
+  margin-left: -41px;
+  background: #181511;
+  color: white;
+  font-weight: 600;
+  border: 1px solid #181511;
+  cursor: pointer;
+}
+
+.subBoxsingle p {
+  line-height: 0;
+  color: #9b9292;
+}
+
+.subfollowicons a {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 6px;
+  margin-right: 8px;
+  transition: 0.3s ease;
+}
+
+.subfollowicons a i {
+  height: 10px;
+  width: 20px;
+  text-align: center;
+}
+section#subscribe {
+  position: relative;
+  margin-bottom: -17px;
+  overflow: hidden;
+  background: #6c3508;
+}
+
+.subfollowicons a:hover {
+  background: white;
+  color: black;
+}
+.subfollowicons {
+  padding-top: 8px;
+}
+.subBoxeswrapper {
+  padding-top: 14px;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  display: grid;
+}
+
+/* services section*/
+
+/*..services section..*/
+
+#services {
+  background: #f5f6f6;
+}
+.singlebox {
+  width: 99%;
+  text-align: center;
+  border: 1px solid #f3f2f2;
+  background: white;
+  float: left;
+  margin-right: 30px;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.singlebox:nth-child(4) {
+  margin-right: 0;
+}
+.singlebox:hover {
+  background: #ff5200;
+  background: #6c3508;
+}
+.singlebox:hover .sboxicon i,
+.singlebox:hover .sboxdesc p,
+.singlebox:hover .sboxlink a,
+.singlebox:hover .sboxlink i,
+.singlebox:hover .sboxtitle h2 {
+  color: white;
+}
+.sboxwrapper {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.active {
+  background: #6c3508;
+  color: white;
+}
+.active i {
+  color: white !important;
+}
+.active p {
+  color: white !important;
+}
+.active a {
+  color: white !important;
+}
+.sboxicon i {
+  color: #6c3508;
+  font-size: 55px;
+  padding: 38px;
+}
+
+.sboxtitle h2 {
+  font-size: 22px;
+  padding-bottom: 30px;
+  letter-spacing: 0px;
+  transition: none !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 25px;
+}
+
+.sboxdesc p {
+  padding: 0px 20px;
+  color: #7b7474e3;
+  margin-bottom: 22px;
+  line-height: 25px;
+}
+
+.sboxlink a {
+  color: #6c3508;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sboxlink {
+  padding-bottom: 38px;
+}
+.sboxlink i {
+  color: #6c3508;
+  padding: 0px 12px;
+  cursor: pointer;
+}
+/*..end of services section..*/
+
 /* for desktop */
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
   }
-
+  .sboxwrapper {
+    display: flex;
+  }
   .nav-center {
     display: flex;
     justify-content: space-between;
@@ -538,6 +754,7 @@ h2.title {
 
   /* id */
   #feature_img {
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -559,7 +776,14 @@ h2.title {
     background-size: cover;
     transition: 0.3s ease transform;
   }
+
+  .subBoxeswrapper {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+  }
 }
+
 img.tour-img:hover {
   transform: scale(1.1);
 }
@@ -572,18 +796,19 @@ img.tour-img:hover {
 .icon {
   font-size: 20px;
   margin-right: 15px;
-  border: 1px solid #ff2f10;
+  border: 1px solid white;
   border-radius: 100%;
   padding: 9px;
   width: 39px;
+  color: #6c3508;
 }
 span.ih_prev {
-  color: #ff2f10;
+  color: #6c3508;
   margin-right: 0;
 }
 
 span.ih_next {
-  color: #ff2f10;
+  color: #6c3508;
   margin-left: 0;
   padding-left: 0;
 }
