@@ -195,7 +195,7 @@ main {
 
 #home {
   background: linear-gradient(rgb(5 53 58 / 88%), hsl(174deg 85% 14% / 55%)),
-    url(../img/5edited.jpg) bottom/cover no-repeat;
+    url(./img/5edited.jpg) bottom/cover no-repeat;
   min-height: 100vh;
 }
 
@@ -402,6 +402,85 @@ img.tour-img {
   }
 }
 
+/*  About Section */
+
+h2.title {
+  text-align: left;
+  font-size: 20px;
+  border-bottom: 1px solid darkgrey;
+  padding-bottom: 8px;
+}
+
+.edu_bio {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.education {
+  margin-bottom: 35px;
+}
+
+.birth {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  background: #ebeff1;
+  border-bottom: 1px solid #c8d4da;
+  border-top: 1px solid #c8d4da;
+}
+
+.nickname {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.birth_place {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  background: #ebeff1;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.gender {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.height {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  background: #ebeff1;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.spouse {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  /* font-size: 19px; */
+  /* border-bottom: 1px solid #c8d4da; */
+}
+.left {
+  width: 420px;
+  float: left;
+  text-align: left;
+  font-size: 15px;
+  line-height: 41px;
+}
+
+.right {
+  text-align: left;
+  float: left;
+  width: 180px;
+  line-height: 41px;
+}
 /* for desktop */
 @media screen and (min-width: 800px) {
   nav {
