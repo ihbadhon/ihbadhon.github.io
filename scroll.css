@@ -418,13 +418,17 @@ img.tour-img {
 .bio {
   padding-top: 25px;
 }
+.edu_bio {
+  overflow: hidden;
+  width: 100%;
+}
 .backgroundbio {
   background: #ebeff1;
 }
 .bioinfo {
   display: flex;
   justify-content: space-between;
-  width: 395px;
+  width: 100%;
   border-bottom: 1px solid #c8d4da;
 }
 
@@ -438,14 +442,14 @@ h2.title {
 .college {
   display: flex;
   justify-content: space-between;
-  width: 395px;
+  width: 100%;
   margin-bottom: 11px;
 }
 
 .university {
   display: flex;
   justify-content: space-between;
-  width: 395px;
+  width: 100%;
 }
 
 .education {
@@ -457,7 +461,7 @@ span.department {
 }
 
 .left {
-  width: 190px;
+  width: 180px;
   float: left;
   text-align: left;
   font-size: 15px;
