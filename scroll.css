@@ -483,7 +483,7 @@ section#subscribe {
 .subBoxsingle {
   /* float: left; */
   width: 330px;
-  margin-left: 41px;
+  /* margin-left: 41px; */
   text-align: center;
   margin-bottom: 25px;
 }
@@ -541,9 +541,14 @@ section#subscribe {
 }
 section#subscribe {
   position: relative;
-  margin-bottom: -17px;
+  margin: 0 auto;
   overflow: hidden;
   background: #6c3508;
+  width: 90%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: -35px;
 }
 
 .subfollowicons a:hover {
