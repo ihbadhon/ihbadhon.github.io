@@ -1,0 +1,561 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red: #ff2f10;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-secondary: hsla(182, 63%, 54%);
+  --clr-black: #222;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+html {
+  scroll-behavior: smooth;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    /* font-size: 1rem; */
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+.btn-white {
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+}
+.btn:hover {
+  background: var(--clr-red);
+  color: var(--clr-white);
+}
+
+/* section */
+.section {
+  padding-bottom: 5rem;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* // scroll */
+
+#home {
+  background: linear-gradient(rgb(5 53 58 / 88%), hsl(174deg 85% 14% / 55%)),
+    url(../image/5edited.jpg) bottom/cover no-repeat;
+  min-height: 100vh;
+}
+
+.logo-container {
+  /* width: 55px; */
+  /* margin: 10px 0px 13px 44px; */
+  align-items: center;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.logo h3 {
+  font-size: 2rem;
+  font-family: 'Audiowide', cursive;
+  padding-top: 1rem;
+}
+.logo {
+  color: var(--clr-white);
+  text-align: center;
+  align-items: center;
+}
+.show-logo-color {
+  color: black;
+}
+.logo h3 span {
+  color: var(--clr-red);
+}
+
+.links a {
+  margin: 0 1rem;
+  text-transform: capitalize;
+  font-family: monospace;
+  color: rgb(85, 38, 122);
+  font-size: 1rem;
+  display: block;
+  line-height: 2rem;
+}
+.links span {
+  color: var(--clr-red);
+}
+
+/* banner */
+
+.banner-container {
+  display: grid;
+  place-items: self-start;
+  min-height: 100vh;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.banner a {
+  color: var(--clr-white);
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid var(--clr-red);
+  border-radius: 20px;
+  margin: 8px 1px;
+  padding: 14px 20px;
+  background: var(--clr-red);
+  /* width: 14rem; */
+}
+
+.banner a:hover {
+  background-color: white;
+  color: var(--clr-red);
+}
+
+.banner p {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: var(--clr-red);
+  margin-left: 0;
+  letter-spacing: 0.2rem;
+  padding-bottom: 12px;
+}
+.banner h1 {
+  /* letter-spacing: 0.3rem; */
+  text-transform: capitalize;
+  /* font-family: 'Koh Santepheap', cursive; */
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  color: white;
+}
+
+.banner h3 {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+  margin: 2rem 0rem;
+  /* font-family: 'Koh Santepheap', cursive; */
+  padding: 1rem 0rem;
+}
+.links-container {
+  padding-right: 43px;
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  background-color: white;
+}
+
+button.nav-toggle {
+  background: transparent;
+  border: none;
+  color: #286d87;
+  width: 53px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 12px;
+  animation: bounce 2s ease-in-out infinite;
+}
+button.nav-toggle:hover {
+  color: #004299;
+}
+/* section  */
+
+#about,
+#services,
+#tours {
+  min-height: 80vh;
+}
+#services {
+  background: white;
+}
+.section h2 {
+  text-align: center;
+}
+
+.section h2 span {
+  color: #3d6fa0;
+}
+
+.footer {
+  background: #13233c;
+  text-align: center;
+  position: relative;
+  display: grid;
+}
+
+.footer p {
+  /* padding-top: 101px; */
+  padding-bottom: 20px;
+  color: white;
+  letter-spacing: var(--spacing);
+}
+p.ihbadhon {
+  padding-top: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+.top-link {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 24px;
+  background: #004299;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  color: white;
+  visibility: hidden;
+  animation: bounce 2s ease infinite;
+  border-radius: 10px;
+}
+
+.show-top-link {
+  visibility: visible;
+}
+
+.fixed-nav {
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-shadow: -8px -10px 20px 0px #0f173a;
+  padding: 0px 0px 1px 44px;
+}
+.fixed-nav .links a {
+  color: #153f63;
+}
+
+.show-links {
+  height: 120px;
+}
+
+img.tour-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 9px;
+  height: 400px;
+  width: -webkit-fill-available;
+}
+
+@media screen and (min-width: 768px) {
+  .container p {
+    max-width: 40rem;
+  }
+}
+
+/* for desktop */
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+  }
+
+  .links-container {
+    height: auto !important;
+  }
+  .nav-toggle {
+    visibility: hidden;
+  }
+  .logo-toggle {
+    background: transparent;
+  }
+  .links a {
+    color: white;
+    background: transparent;
+  }
+  .links-container {
+    background: transparent;
+  }
+  .banner p {
+    max-width: 40rem;
+  }
+  .banner-container {
+    padding-top: 10rem;
+    align-items: flex-start;
+  }
+  .banner h1 {
+    text-transform: capitalize;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    color: white;
+  }
+
+  .banner h3 {
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    margin: 2rem 0rem;
+  }
+
+  /* id */
+  #feature_img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  img.tour-img {
+    width: 19.5%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 200px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    background-size: cover;
+    transition: 0.3s ease transform;
+  }
+}
+img.tour-img:hover {
+  transform: scale(1.1);
+}
+.social {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 15px;
+  border: 1px solid #ff2f10;
+  border-radius: 100%;
+  padding: 9px;
+  width: 39px;
+}
+span.ih_prev {
+  color: #ff2f10;
+  margin-right: 0;
+}
+
+span.ih_next {
+  color: #ff2f10;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* end desktop size */
+
+/* contianer */
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and(min-width:576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .banner {
+    padding-left: 0rem;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* animation */
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

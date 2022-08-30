@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll</title>
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/50d8f0ec82.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./scroll.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+      /* @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Koh+Santepheap:wght@100;300;400;700;900&family=Simonetta&display=swap'); */
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+    </style>
+  </head>
+
+  <body>
+    <header id="home">
+      <div class="container">
+        <nav id="nav">
+          <div class="nav-center">
+            <div class="logo-container">
+              <div class="logo">
+                <!-- <img src="../image/logo1.png" alt="logo"> -->
+                <h3>I<span>H</span>Ch<span>y</span></h3>
+              </div>
+              <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+            <div class="links-container">
+              <div class="links">
+                <a href="#home" class="scroll-link"><span>home</span></a>
+                <a href="#about" class="scroll-link">about</a>
+                <a href="#services" class="scroll-link">services</a>
+                <a href="#tours" class="scroll-link">tours</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- banner -->
+        <div class="banner-container">
+          <div class="banner">
+            <p>HELLO, I' M</p>
+            <h1>IH BADHON</h1>
+            <h3>WEB DEVELOPER</h3>
+            <!-- <h1>scroll project</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic eum ad necessitatibus. Quia
+                    dolore id
+                    tempora saepe ea dignissimos!</p> -->
+            <a href="#tours" class="btn scroll-link">contact me</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- about section -->
+    <section id="about" class="section">
+      <div class="title">
+        <h2>About <span>me</span></h2>
+      </div>
+    </section>
+    <!-- services -->
+    <section id="services" class="section">
+      <div class="title">
+        <h2>My <span>services</span></h2>
+      </div>
+    </section>
+    <!-- tour section -->
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>featured <span>tours</span></h2>
+      </div>
+      <div id="feature_img">
+        <img src="img/IMG-20220628-WA0048.jpg" class="tour-img" />
+        <img src="./img/IMG_20220628_105105.jpg" class="tour-img" />
+        <img src="./img/IMG_20220629_092503.jpg" class="tour-img" />
+        <img src="./img/IMG_20220629_092628.jpg" class="tour-img" />
+        <img src="./img/IMG_20220629_093707.jpg" alt="" class="tour-img" />
+        <img src="./img/IMG_20220629_143143.jpg" class="tour-img" />
+        <img src="img/IMG_20220629_154539.jpg" class="tour-img" />
+        <img src="./img/IMG_20220629_154853.jpg" class="tour-img" />
+        <img src="./img/IMG_20220629_154904.jpg" class="tour-img" />
+        <img src="./img/IMG_20220629_154907.jpg" class="tour-img" />
+      </div>
+    </section>
+    <!-- footer -->
+    <div class="footer">
+      <p class="ihbadhon">
+        <span class="ih_prev">~</span>IH BADHON<span class="ih_next">~</span>
+      </p>
+      <div class="social">
+        <i class="fa fa-facebook icon" aria-hidden="true"></i>
+        <i class="fa fa-linkedin icon" aria-hidden="true"></i>
+        <i class="fa fa-twitter icon"></i>
+        <i class="fa fa-google icon" aria-hidden="true"></i>
+        <i class="fa fa-github icon"></i>
+      </div>
+
+      <p>
+        copyright &copy;
+        <span id="date">2020</span>
+        .all right reserved
+      </p>
+    </div>
+    <!-- back to top -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="scroll.js"></script>
+  </body>
+</html>
