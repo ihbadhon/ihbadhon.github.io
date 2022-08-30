@@ -456,54 +456,8 @@ span.department {
   float: left;
 }
 
-.birth {
-  display: flex;
-  justify-content: space-between;
-  width: 395px;
-  background: #ebeff1;
-  border-bottom: 1px solid #c8d4da;
-  border-top: 1px solid #c8d4da;
-}
-
-.nickname {
-  display: flex;
-  justify-content: space-between;
-  width: 395px;
-  border-bottom: 1px solid #c8d4da;
-}
-
-.birth_place {
-  display: flex;
-  justify-content: space-between;
-  width: 395px;
-  background: #ebeff1;
-  border-bottom: 1px solid #c8d4da;
-}
-
-.gender {
-  display: flex;
-  justify-content: space-between;
-  width: 395px;
-  border-bottom: 1px solid #c8d4da;
-}
-
-.height {
-  display: flex;
-  justify-content: space-between;
-  width: 395px;
-  background: #ebeff1;
-  border-bottom: 1px solid #c8d4da;
-}
-
-.spouse {
-  display: flex;
-  justify-content: space-between;
-  width: 395px;
-  /* font-size: 19px; */
-  /* border-bottom: 1px solid #c8d4da; */
-}
 .left {
-  width: 230px;
+  width: 190px;
   float: left;
   text-align: left;
   font-size: 15px;
@@ -513,7 +467,7 @@ span.department {
 .right {
   text-align: left;
   float: left;
-  width: 180px;
+  width: 185px;
   line-height: 41px;
 }
 .line_height {
