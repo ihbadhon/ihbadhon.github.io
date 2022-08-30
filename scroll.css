@@ -195,7 +195,7 @@ main {
 
 #home {
   background: linear-gradient(rgb(5 53 58 / 88%), hsl(174deg 85% 14% / 55%)),
-    url(../image/5edited.jpg) bottom/cover no-repeat;
+    url(../img/5edited.jpg) bottom/cover no-repeat;
   min-height: 100vh;
 }
 
