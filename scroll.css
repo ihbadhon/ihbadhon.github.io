@@ -99,6 +99,7 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
+  font-size: 57px;
 }
 h1 {
   font-size: 3rem;
@@ -176,7 +177,7 @@ p {
   padding-top: 30px;
 }
 .mark {
-  width: 78px;
+  width: 198px;
   /* color: red; */
   display: block;
   height: 2px;
@@ -193,6 +194,7 @@ p {
   .section-center {
     width: 95vw;
   }
+  
 }
 main {
   min-height: 100vh;
@@ -203,11 +205,12 @@ main {
 /* // scroll */
 
 #home {
-  /*background: linear-gradient(rgb(5 53 58 / 88%), hsl(174deg 85% 14% / 55%)),
-    url(./img/5edited.jpg) bottom/cover no-repeat;*/
-  background: linear-gradient(rgb(33 19 0 / 100%), hsl(0deg 0% 0% / 62%)),
+  background: linear-gradient(rgb(33 11 14 / 88%), hsl(174deg 85% 14% / 55%)),
     url(./img/5edited.jpg) bottom/cover no-repeat;
+  /* background: linear-gradient(rgb(33 19 0 / 100%), hsl(0deg 0% 0% / 62%)),
+    url(./img/5edited.jpg) bottom/cover no-repeat; */
   min-height: 100vh;
+  background-blend-mode: color;
 }
 
 .logo-container {
@@ -287,11 +290,11 @@ main {
   padding-bottom: 12px;
 }
 .banner h1 {
-  /* letter-spacing: 0.3rem; */
+  letter-spacing: 0.3rem;
   text-transform: capitalize;
   /* font-family: 'Koh Santepheap', cursive; */
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   color: white;
 }
 
@@ -303,6 +306,46 @@ main {
   /* font-family: 'Koh Santepheap', cursive; */
   padding: 1rem 0rem;
 }
+
+/* Add your existing styles here */
+
+/* Style for the text animation */
+.text-animation {
+  font-size: 24px; /* Adjust the font size as needed */
+  overflow: hidden; /* Hide overflowing characters */
+  white-space: break-spaces; /* Prevent line break */
+  position: relative;
+}
+
+/* Style for the individual letters */
+.text-animation span {
+  /* display: inline-block; */
+  opacity: 0;
+  transform: scale(0.2); /* Start with small size (hidden) */
+  animation: scaleIn 3s forwards infinite; /* Apply the animation infinitely */
+  animation-delay: var(--animation-delay);
+}
+
+/* Keyframes animation for Scale In effect */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.2); /* Start with small size (hidden) */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2); /* Scale up to a larger size */
+    opacity: 1; /* Fade in the letter */
+  }
+  100% {
+    transform: scale(1); /* Scale up to normal size */
+  }
+}
+
+.programmer {
+  color: red;
+}
+
+
 .links-container {
   padding-right: 43px;
   height: 0;
@@ -328,7 +371,11 @@ button.nav-toggle:hover {
 
 #about,
 #services,
-#tours {
+#tours,
+#problem-solving,
+#experience,
+#skills
+ {
   min-height: 80vh;
 }
 #services {
@@ -427,7 +474,7 @@ img.tour-img {
 }
 .bioinfo {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
   border-bottom: 1px solid #c8d4da;
 }
@@ -441,14 +488,16 @@ h2.title {
 
 .college {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: start; */
   width: 100%;
   margin-bottom: 11px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .university {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
 }
 
@@ -460,12 +509,145 @@ span.department {
   float: left;
 }
 
+/* education  */
+/* Style for the education container */
+.education {
+  display: grid;
+  flex-direction: column; /* Place items in separate columns */
+   /* Align items to the left */
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Style for each education item (university and college) */
+.education .university,
+.education .college {
+  width: 100%; /* Each item takes up the full width of its column */
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  margin-bottom: 20px; /* Add some space between items */
+  text-align: left; /* Align text to the left */
+  display: grid;
+  border-bottom: 2px solid #e2e4e5;
+}
+
+/* Style for the logo container (you can add specific dimensions and background images) */
+.education .logo {
+  /* Add your logo styling here */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* Style for headings and paragraphs */
+.education h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.education h3 {
+  font-size: 15px;
+  margin-top: 5px;
+  /* text-align: center; */
+}
+
+.education p {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  text-align: center;
+}
+.education .logo img {
+  width: 20%;
+  float: center;
+  border-radius: 87px;
+  box-shadow: 0px 8px 5px 7px rgba(0, 0, 0, 0.2);
+  /* margin: 0 auto; */
+  text-align: center;
+}
+.logo.unilogo {
+  /* width: 85%; */
+}
+
+.education h2, h3 {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: .10rem;
+  color: #454545;
+}
+
+/* end education  */
+
+/*  start skill section  */
+.skills-section {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.left-column {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  /* You can add more styling here */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.left-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.right-column {
+  /* flex: 1; */
+  width: 95%;
+  /* padding: 10px; */
+  /* You can add more styling here */
+  overflow: hidden;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.right-column p {
+  margin-bottom: 10px;
+  /* You can add more styling here */
+}
+.left-column svg {
+  font-size: 108px;
+}
+section#skills .container {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* align-content: flex-start; */
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+.right-column img {
+  width: 18px;
+  float: left;
+  margin-right: 9px;
+}
+/* end skill section  */
 .left {
   width: 180px;
   float: left;
   text-align: left;
   font-size: 15px;
   line-height: 41px;
+  margin-right: 110px;
 }
 
 .right {
@@ -580,27 +762,30 @@ section#subscribe {
 .singlebox {
   width: 99%;
   text-align: center;
-  border: 1px solid #f3f2f2;
+  border: 1px solid #f3e9e9;
   background: white;
   float: left;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   transition: 0.3s ease;
   border-radius: 5px;
   margin-bottom: 5px;
+  flex: 0 calc(50% - 10px);
 }
 .singlebox:nth-child(4) {
   margin-right: 0;
 }
 .singlebox:hover {
-  background: #ff5200;
-  background: #6c3508;
+/* background: #ff5200; */
+  /* background: #6c3508; */
+  box-shadow: 0 20px 30px -10px rgba(0,0,0,.2);
 }
+
 .singlebox:hover .sboxicon i,
 .singlebox:hover .sboxdesc p,
 .singlebox:hover .sboxlink a,
 .singlebox:hover .sboxlink i,
 .singlebox:hover .sboxtitle h2 {
-  color: white;
+  /* color: white; */
 }
 .sboxwrapper {
   overflow: hidden;
@@ -658,6 +843,69 @@ section#subscribe {
 }
 /*..end of services section..*/
 
+/* Activities section*/
+
+/* Style for the problem-solving section */
+#problem-solving {
+  margin-top: 20px;
+}
+p.activities-head {font-family: revert;font-size: large;padding-top: 14px;text-align: center;}
+
+/* Style for the image boxes */
+.image-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #eaecee;
+}
+
+.image-box {
+  /* width: calc(33.33% - 20px); */
+  margin-bottom: 20px;
+  text-align: center;
+  width: 97%;
+  align-items: center;
+  align-content: center;
+  height: 53%;
+}
+
+.image-box img {
+  max-width: 85%;
+  /* border: 2px solid #ccc; */
+  border-radius: 5px;
+  text-align: center;
+  align-self: center;
+  background-position: center;
+  margin: 0 auto;
+  /* padding: 14px; */
+  margin-left: 24px;
+  height: 300px;
+}
+
+
+.card-title {
+    color: #000;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 15px 0 0;
+}
+.image-box p {
+  margin: 10px 0;
+}
+img.toph {
+  padding: 19px;
+}
+/* Style for the Codeforces handle link */
+.image-box a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* end activities section */
+
 /* for desktop */
 @media screen and (min-width: 800px) {
   nav {
@@ -665,6 +913,8 @@ section#subscribe {
   }
   .sboxwrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .nav-center {
     display: flex;
@@ -745,6 +995,132 @@ section#subscribe {
     justify-content: space-around;
     padding-top: 15px;
   }
+  p.activities-head {
+    text-align: left;
+}
+
+/* education section  */
+/* Style for the education container */
+.education {
+  display: grid;
+  flex-direction: column; /* Place items in separate columns */
+   /* Align items to the left */
+  align-items: left;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Style for each education item (university and college) */
+.education .university,
+.education .college {
+  width: 100%; /* Each item takes up the full width of its column */
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  margin-bottom: 20px; /* Add some space between items */
+  text-align: left; /* Align text to the left */
+  display: grid;
+  border-bottom: 2px solid #e2e4e5;
+}
+
+/* Style for the logo container (you can add specific dimensions and background images) */
+.education .logo {
+  /* Add your logo styling here */
+  width: 65%;
+  text-align: lec;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 9px;
+}
+
+/* Style for headings and paragraphs */
+.education h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.education h3 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.education p {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  float: left;
+  text-align: left;
+}
+.education .logo img {
+  /* width: 20%; */
+  float: left;
+  border-radius: 87px;
+  box-shadow: 0px 8px 5px 7px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  text-align: left;
+}
+.logo.unilogo {
+}
+
+.education h2, h3 {
+  text-align: left;
+  /* font-size: 20px; */
+  letter-spacing: .10rem;
+  color: #454545;
+}
+
+.right-column {
+  flex: 1;
+  width: 95%;
+  /* padding: 10px; */
+  /* You can add more styling here */
+  overflow: hidden;
+  text-align: left;
+  margin: 0 auto;
+}
+section#skills .container {
+  display: flex;
+  padding-top: 20px;
+}
+.right-column .lan {
+  color: #1454c2;
+}
+
+/* education section  */
+}
+
+/* Add your existing styles here */
+
+/* Style for the modal */
+.modal {
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 90%);;
+  z-index: 1;
+}
+
+/* Style for the modal content */
+.modal-content {
+  display: block;
+  margin: auto;
+  top: 15%;
+  max-width: fit-content;
+  max-height: 100%;
+  position: relative;
+}
+
+/* Style for the close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
 }
 
 img.tour-img:hover {
@@ -791,6 +1167,10 @@ span.ih_next {
   .container {
     max-width: 540px;
   }
+  img.toph {
+    padding: 25px;
+  }
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -805,6 +1185,9 @@ span.ih_next {
   .banner {
     padding-left: 0rem;
     margin-left: 0;
+  }
+  img.toph {
+    padding: 90px;
   }
 }
 
