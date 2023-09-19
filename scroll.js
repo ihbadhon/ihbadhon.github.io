@@ -1,6 +1,11 @@
 const navToggleBtn = document.querySelector('.nav-toggle');
 const linksContainer = document.querySelector('.links-container');
 const links = document.querySelector('.links');
+const da_te = document.getElementById('date');
+
+
+const d = new Date();
+da_te.innerHTML = d.getFullYear();
 
 navToggleBtn.addEventListener('click', function () {
   // linksContainer.classList.toggle('show-links')
@@ -65,3 +70,88 @@ scrollLinks.forEach((link) => {
     linksContainer.style.height = 0;
   });
 });
+
+// Get references to HTML elements
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modal-image');
+const tourImages = document.querySelectorAll('.tour-img');
+const closeButton = document.querySelector('.close');
+
+// Add a click event listener to each tour image
+tourImages.forEach((image) => {
+  image.addEventListener('click', () => {
+    modal.style.display = 'block'; // Display the modal
+    modalImage.src = image.src; // Set the modal image source to the clicked image
+  });
+});
+
+// Close the modal when the close button is clicked
+closeButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close the modal when the background is clicked
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// Optional: Close the modal when the 'Esc' key is pressed
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    modal.style.display = 'none';
+  }
+});
+
+// JavaScript to trigger the text animation
+const textContainer = document.querySelector('.text-animation');
+const text = textContainer.textContent.trim();
+textContainer.innerHTML = ''; // Clear the original text
+
+// Loop through each character in the text and wrap it in a span element
+for (const char of text) {
+  const charElement = document.createElement('span');
+  charElement.textContent = char;
+  textContainer.appendChild(charElement);
+}
+
+// Calculate animation delays for each letter
+const letters = textContainer.querySelectorAll('span');
+letters.forEach((letter, index) => {
+  letter.style.setProperty('--animation-delay', `${index * 0.1}s`);
+});
+
+// education section
+// Function to check if an element is in the viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle scrolling
+function handleScroll() {
+  var aboutSection = document.querySelector(".section");
+
+  const navHeight = aboutSection.getBoundingClientRect().height;
+  //   console.log(navHeight);
+  const scrollHeight = window.pageYOffset;
+    console.log(scrollHeight);
+  /// top link
+  if (scrollHeight > 300) {
+    aboutSection.classList.add('appear');
+  } else {
+    topLink.classList.remove('');
+  }
+}
+
+// Add a scroll event listener to trigger the animation when scrolling
+window.addEventListener("scroll", handleScroll);
+
+// Initial check on page load
+handleScroll();
