@@ -438,6 +438,7 @@ p.ihbadhon {
   width: 100%;
   box-shadow: -8px -10px 20px 0px #0f173a;
   padding: 0px 0px 1px 44px;
+  z-index: 1000;
 }
 .fixed-nav .links a {
   color: #153f63;
