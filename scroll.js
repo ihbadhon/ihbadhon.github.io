@@ -155,3 +155,19 @@ window.addEventListener("scroll", handleScroll);
 
 // Initial check on page load
 handleScroll();
+
+///skill section start....
+const myLordIcon = document.getElementById("myLordIcon");
+
+// Define a function to restart the animation
+function restartAnimation() {
+    myLordIcon.load();
+    myLordIcon.play();
+}
+
+// Start the animation when the page loads
+myLordIcon.load();
+myLordIcon.play();
+
+// Set an interval to restart the animation periodically (adjust the interval as needed)
+setInterval(restartAnimation, 5000); // Restart every 5 seconds
