@@ -480,11 +480,12 @@ img.tour-img {
   border-bottom: 1px solid #c8d4da;
 }
 
-h2.title {
+.title_head h2.title {
   text-align: left;
   font-size: 20px;
   border-bottom: 1px solid darkgrey;
   padding-bottom: 8px;
+  letter-spacing: var(--spacing);
 }
 
 .college {
@@ -504,6 +505,7 @@ h2.title {
 
 .education {
   margin-bottom: 35px;
+  margin-top: 24px;
 }
 span.department {
   text-align: left;
